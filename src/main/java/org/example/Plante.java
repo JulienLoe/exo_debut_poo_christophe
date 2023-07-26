@@ -1,9 +1,9 @@
 package org.example;
 
 public class Plante {
-    private String nom;
-    private float hauteur;
-    private String couleurFeuilles;
+    protected String nom;
+    protected float hauteur;
+    protected String couleurFeuilles;
 
 
 

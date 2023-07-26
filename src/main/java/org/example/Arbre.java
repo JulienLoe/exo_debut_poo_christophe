@@ -18,9 +18,9 @@ public class Arbre extends Plante {
     }
 
     public void infoFleur(){
-        System.out.println(getNom());
-        System.out.println(getHauteur());
-        System.out.println(getCouleurFeuilles());
-        System.out.println(getCirconference());
+        System.out.println(this.nom);
+        System.out.println(this.hauteur);
+        System.out.println(this.couleurFeuilles);
+        System.out.println(this.circonference);
     }
 }

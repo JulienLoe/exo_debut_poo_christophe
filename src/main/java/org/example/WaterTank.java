@@ -1,24 +1,24 @@
 package org.example;
 
 public class WaterTank {
-    private int poids_a_vide;
-    private int capMax;
-    private int niveau_remplissage;
+    private double poids_a_vide;
+    private double capMax;
+    private double niveau_remplissage;
 
-    public int getPoids() {
+    public double getPoids() {
         return poids;
     }
 
-    public void setPoids(int poids) {
+    public void setPoids(double poids) {
         this.poids = poids;
     }
 
-    private int poids;
+    private double poids;
 
-    static int volume_total;
+    static double volume_total;
 
 
-    public WaterTank(int poids_a_vide, int capMax, int niveau_remplissage) {
+    public WaterTank(double poids_a_vide, double capMax, double niveau_remplissage) {
         this.poids_a_vide = poids_a_vide;
         this.capMax = capMax;
         this.niveau_remplissage = niveau_remplissage;
@@ -32,7 +32,7 @@ public class WaterTank {
 
 
     }
-    public void  remplir(int volume) {
+    public void  remplir(double volume) {
 
         if (niveau_remplissage <= capMax ) {
             setNiveau_remplissage(volume);
@@ -40,7 +40,7 @@ public class WaterTank {
         }
     }
 
-    public void vider(int volume) {
+    public void vider(double volume) {
 
         if (niveau_remplissage > 0) {
             setNiveau_remplissage(-volume);
@@ -48,41 +48,25 @@ public class WaterTank {
         }
     }
 
-    public int total() {
+    public double total() {
         volume_total += niveau_remplissage;
         return volume_total;
     }
 
 
-    public static int getVolume_total() {
+    public static double getVolume_total() {
         return volume_total;
     }
 
-    public static void setVolume_total(int volume_total) {
+    public static void setVolume_total(double volume_total) {
         WaterTank.volume_total += volume_total;
     }
 
-    public int getPoids_a_vide() {
-        return poids_a_vide;
-    }
-
-    public void setPoids_a_vide(int poids_a_vide) {
-        this.poids_a_vide = poids_a_vide;
-    }
-
-    public int getCapMax() {
-        return capMax;
-    }
-
-    public void setCapMax(int capMax) {
-        this.capMax = capMax;
-    }
-
-    public int getNiveau_remplissage() {
+    public double getNiveau_remplissage() {
         return niveau_remplissage;
     }
 
-    public void setNiveau_remplissage(int niveau_remplissage) {
+    public void setNiveau_remplissage(double niveau_remplissage) {
         this.niveau_remplissage += niveau_remplissage;
     }
 }

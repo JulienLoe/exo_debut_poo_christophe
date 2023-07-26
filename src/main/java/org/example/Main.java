@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -50,5 +53,27 @@ public class Main {
 
         Plante p = new Arbre("kele", 15, "defr", 45.45);
         p.infoFleur();
+
+        int key = 0;
+        Scanner scanner = new Scanner( System.in );
+        System.out.println("Commencer la partie : 1 ");
+        System.out.println("Quitter : 2 ");
+        key = scanner.nextInt();
+        if(key == 1) {
+            Pendu.genererMasque();
+            while (key != 2){
+
+                System.out.println("Tapez votre mot : ");
+                Pendu.mot = scanner.nextLine();
+                Pendu.testChar();
+                if (Pendu.masqueTab != null){
+
+                System.out.print("Le mot à trouver : ");
+                System.out.println(Arrays.toString(Pendu.masqueTab));}
+            }
+
+        }
+
+
     }
 }
