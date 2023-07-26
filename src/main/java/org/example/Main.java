@@ -25,6 +25,30 @@ public class Main {
 
         }
 
+        WaterTank w1 = new WaterTank(100,150,10 );
+        WaterTank w2 = new WaterTank(70,150,25);
 
+
+
+        System.out.println("WaterTank 1 volume de départ : " + w1.getNiveau_remplissage());
+        System.out.println("WaterTank 2 volume de départ :" + w2.getNiveau_remplissage());
+        System.out.println("Volume total des WaterTank : " +  WaterTank.getVolume_total());
+        w1.remplir(5);
+        System.out.println("Volume total des WaterTank : " +  WaterTank.getVolume_total());
+        w1.remplir(60);
+        System.out.println("Volume total des WaterTank : " +  WaterTank.getVolume_total());
+        w2.vider(5);
+        System.out.println("Volume total des WaterTank : " +  WaterTank.getVolume_total());
+        w2.vider(20);
+        System.out.println("Volume total des WaterTank : " +  WaterTank.getVolume_total());
+        System.out.println("WaterTank 1 volume de départ : " + w1.getNiveau_remplissage());
+        System.out.println("WaterTank 2 volume de départ :" + w2.getNiveau_remplissage());
+        w1.totalCiterne();
+        System.out.println("Poids total de la citerne 1 : " + w1.getPoids() + "kg");
+        w2.totalCiterne();
+        System.out.println("Poids total de la citerne 2: " + w2.getPoids() + "kg");
+
+        Plante p = new Arbre("kele", 15, "defr", 45.45);
+        p.infoFleur();
     }
 }
